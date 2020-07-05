@@ -1,6 +1,5 @@
  # Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding
- 
- [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding/graphs/commit-activity) [![GitHub fork](https://img.shields.io/github/forks/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding?style=social)](https://github.com/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding) [![GitHub issues](https://img.shields.io/github/issues/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding)](https://github.com/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding/issues) [![GitHub stars](https://img.shields.io/github/stars/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding?style=social)](https://github.com/Nidhi786sharma/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding/stargazers) 
+
  
  
 
@@ -89,26 +88,7 @@
 
 
 
-## Fork this repository
-
-Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
-
-## Clone the repository
-
-Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the clone button and then click the *copy to clipboard icon.*
-
-Open a terminal and run the following git command:
-'''
-      git clone "url you just copied"
-'''
-where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
-
-For example:
-
-     git clone https://github.com/Your_Username/Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding
-.git
-
-where Your_Username is your GitHub username. Here you're copying the contents of the Intelligent customer help desk with smart document understanding repository on GitHub to your computer.
+.
 
 
 
