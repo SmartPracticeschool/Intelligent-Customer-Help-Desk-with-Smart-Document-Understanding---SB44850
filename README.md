@@ -56,53 +56,16 @@
     and using IBM Watson discovery will redirect the user to the  section of the owner's manual
     where the answer to the question lies.
     
-    
-  ## Flow
-
-![architecture](http://i.xp.io/tWSpUFl.png)
-
-    
-    
-    
-    
-    
-    
-
 ## What will you get to know here?
 
 
-1. How to [create a skill](skill.md) using Watson Assistant.
+1. How to [create a skill] using Watson Assistant.
 
 
-2. How to [create UI](flow.md) with node red flow (Chatbot).
+2. How to [create UI] with node red flow (Chatbot).
 
 
-3. How to [create cloud function](Cf.md) using IBM cloud.
+3. How to [create cloud function] using IBM cloud.
 
 
-4. How to [connect Watson discovery](Discovery.md) to chatbot through Cloud funtcion.
-
-
-
-
-
-
-
-.
-
-
-
-
-
-
-
-
-
-# License
-
-This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
-
-
-[Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
-
-
+4. How to [connect Watson discovery] to chatbot through Cloud funtcion.
