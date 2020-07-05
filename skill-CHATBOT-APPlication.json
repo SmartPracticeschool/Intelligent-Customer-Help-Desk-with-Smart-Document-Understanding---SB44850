@@ -1,0 +1,659 @@
+{
+  "intents": [
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "offers"
+        },
+        {
+          "text": "menu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thankyou",
+      "examples": [
+        {
+          "text": "tq"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "product-info",
+      "examples": [
+        {
+          "text": "water"
+        },
+        {
+          "text": "thermostat"
+        },
+        {
+          "text": "electricity"
+        },
+        {
+          "text": "connnection"
+        },
+        {
+          "text": "settings"
+        },
+        {
+          "text": "how to start heater"
+        },
+        {
+          "text": "installation"
+        },
+        {
+          "text": "how to turn on heater"
+        },
+        {
+          "text": "how do i set the time"
+        },
+        {
+          "text": "HEATER"
+        },
+        {
+          "text": "time"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "offer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "menu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "capacity",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "item",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "items",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "product",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "products",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "6l",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "benefit_type",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "here to book",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "book",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "booking",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "place order",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "item",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "SPRING HOT PLUS",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "PEBBLE METALLICA",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "VERANO DG",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STEAMER PLUS",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "iam here to book",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "place order",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "paneer butter masala",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STEAMER PLUS E C N",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STEAMER PLUS M S H",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STEAMER PLUS V S H",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STEAMER",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/lakshman12b%40gmail.com_dev/default/myaction.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "please mention the capacity in units (6 - 10 L , 10 TO 15 L ,25L ,35L)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1593848119080",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1593848119084",
+      "previous_sibling": "handler_9_1593848119084"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1593848119080",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_9_1593848119084"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1593848891117",
+      "disabled": true,
+      "dialog_node": "response_9_1593849019182"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "try again later"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593828209926",
+      "conditions": "anything_else",
+      "dialog_node": "response_9_1593925599434",
+      "previous_sibling": "response_4_1593925598267"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "\"<?$webhook_result_1.passages[0].passage_text?>\""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1593828209926",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_4_1593925598267"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your order for @item of capacity @sys-number litres is ordered successfully."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593846614797",
+      "conditions": "@item && @sys-number",
+      "dialog_node": "response_10_1593847904173",
+      "previous_sibling": "slot_6_1593848119080"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593846614797",
+      "dialog_node": "response_4_1593849948041",
+      "previous_sibling": "response_3_1593848352987"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your order for @item of capacity $number litres is placed successfully. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593846614797",
+      "conditions": "@item && $number!=\"\"",
+      "dialog_node": "response_4_1593848157260",
+      "previous_sibling": "response_10_1593847904173"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "your order for $item of capacity @sys-number litres is placed successfully"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1593846614797",
+      "conditions": "@sys-number && $item!=\"\"",
+      "dialog_node": "response_3_1593848352987",
+      "previous_sibling": "response_4_1593848157260"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1593846614797",
+      "variable": "$number",
+      "dialog_node": "slot_6_1593848119080",
+      "previous_sibling": "slot_3_1593848077588"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1593846614797",
+      "variable": "$item",
+      "dialog_node": "slot_3_1593848077588"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "what do you want to order"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1593848077588",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1593848077601",
+      "previous_sibling": "handler_10_1593848077601"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1593848077588",
+      "context": {
+        "item": "@item"
+      },
+      "conditions": "@item",
+      "event_name": "input",
+      "dialog_node": "handler_10_1593848077601"
+    },
+    {
+      "type": "frame",
+      "title": "booking",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@item",
+      "dialog_node": "node_7_1593846614797",
+      "previous_sibling": "node_9_1593848891117"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "its our pleasure to help you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thankyou",
+      "dialog_node": "node_4_1592049850540",
+      "previous_sibling": "node_10_1593828209926"
+    },
+    {
+      "type": "standard",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "PEBBLE METALLICA ,SPRING HOT PLUS , STEAMER  , STEAMER PLUS  , VERANO DG ,STEAMER PLUS E C N,STEAMER PLUS M S H,STEAMER PLUS V S H    \n                                                                                                                                                                    \n                                                            \"Select the model \""
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "@order",
+      "dialog_node": "node_1_1593908510044",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "menu",
+      "output": {
+        "generic": [
+          {
+            "title": "PEBBLE METALLICA ,SPRING HOT PLUS , STEAMER  , STEAMER PLUS  , VERANO DG ,STEAMER PLUS E C N,STEAMER PLUS M S H,STEAMER PLUS V S H",
+            "options": [
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "values": [
+              {
+                "text": "PEBBLE METALLICA ,SPRING HOT PLUS , STEAMER  , STEAMER PLUS  , VERANO DG ,STEAMER PLUS E C N,STEAMER PLUS M S H,STEAMER PLUS V S H"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@enquiry",
+      "dialog_node": "node_9_1593848891117",
+      "previous_sibling": "node_1_1593908510044"
+    },
+    {
+      "type": "standard",
+      "title": "search for benefits",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "input": "<?input.text?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#product-info",
+      "dialog_node": "node_10_1593828209926",
+      "previous_sibling": "node_7_1593846614797"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello,I am here to help you with booking and queries with water heaters.how can I help you ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_4_1592049879745"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_4_1592049850540",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi,how can i help you"
+              },
+              {
+                "text": "Hello,how can i help you"
+              },
+              {
+                "text": "Hey,how can i help you"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#Greetings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1592049879745"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "CHATBOT APPlication",
+  "language": "en",
+  "description": ""
+}
