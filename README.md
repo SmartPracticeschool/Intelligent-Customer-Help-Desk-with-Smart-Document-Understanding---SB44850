@@ -73,3 +73,4 @@
 testimonial link https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=0ef57531-482f-4968-87a0-c762934965c1&serviceInstanceID=be65e0b6-4c6b-4511-bd51-5c0d095324a6
 
 YouTube demo video link: https://youtu.be/h4kY9-BaZ8c
+node-red chatbot link :https://aii-chatbot.eu-gb.mybluemix.net/ui
